@@ -85,11 +85,22 @@
     }
 
     /* Cardápio */
+    .categoria-titulo {
+      font-weight: 700;
+      font-size: 1.8rem; /* aumentado */
+      color: #ff5722;
+      margin-bottom: 20px;
+    }
     .cardapio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
       gap: 30px;
     }
+    /* Espaço maior entre categorias */
+    #cardapio .cardapio-grid + .categoria-titulo {
+      margin-top: 60px;
+    }
+
     .item-cardapio {
       border: 1px solid #ddd;
       border-radius: 10px;
@@ -249,7 +260,7 @@
 <section id="cardapio">
   <h2>Cardápio</h2>
 
-  <h3>Hambúrgueres</h3>
+  <h3 class="categoria-titulo">Hambúrgueres</h3>
   <div class="cardapio-grid">
     <div class="item-cardapio">
       <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Classic Burger" />
@@ -285,8 +296,8 @@
     </div>
   </div>
 
-  <h3 style="margin-top: 40px;">Bebidas</h3>
-  <div class="cardapio-grid">
+  <h3 class="categoria-titulo" style="margin-top: 60px;">Bebidas</h3>
+  <div class="cardapio-grid" style="margin-top: 20px;">
     <div class="item-cardapio">
       <img src="https://images.unsplash.com/photo-1561047029-3000e4cd9c36?auto=format&fit=crop&w=600&q=80" alt="Refrigerante" />
       <div class="info">
@@ -325,12 +336,11 @@
 <section id="avaliacoes">
   <h2>Avaliações dos Clientes</h2>
   <div class="estrelas" aria-label="Avaliação média 4.9 de 5 estrelas">
-    <!-- 5 estrelas, sendo 4 cheias e 1 quase cheia -->
+    <!-- 5 estrelas, sendo 4 cheias e 1 meia -->
     <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
     <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
     <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
     <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-    <!-- meia estrela -->
     <svg viewBox="0 0 24 24">
       <defs>
         <linearGradient id="halfGrad">
@@ -366,14 +376,10 @@
     <a href="#" target="_blank">Instagram</a> | 
     <a href="#" target="_blank">Facebook</a>
   </p>
-
-  <div style="margin-top: 30px;">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.727978960573!2d-46.6563772844667!3d-23.56257308468419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ca9046c0eb%3A0x7e3a2f118a03b7a1!2sAv.%20Paulista%2C%20São%20Paulo%20-%20SP%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1689237188746!5m2!1spt-BR!2sus"
-      width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
 </footer>
 
 </body>
 </html>
+
+
+@felipe._.lz
